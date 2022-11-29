@@ -23,6 +23,14 @@ let readJeopardyData = async () => {
     let buttons400 = document.querySelectorAll('#section-400-buttons button');
     let buttons600 = document.querySelectorAll('#section-600-buttons button');
     let buttons800 = document.querySelectorAll('#section-800-buttons button');
+    let submitButton = document.querySelector('#submitButton1');
+    let inputText = document.querySelector('#userInput');
+    let form = document.querySelector('#answer');
+
+    
+
+
+
     //console.log(buttons100);
 
     for(let i = 0; i < buttons100.length; i++){
@@ -37,7 +45,8 @@ let readJeopardyData = async () => {
          let question = randomQuestion(array100)
          let paragraph = document.querySelector('p')
          paragraph.innerText = question.question
-         console.log(question)
+         console.log(question.question)
+         console.log(question.answer)
         })
         }
 
@@ -51,7 +60,8 @@ let readJeopardyData = async () => {
              let question = randomQuestion(array200)
              let paragraph = document.querySelector('p')
              paragraph.innerText = question.question
-             console.log(question)
+             console.log(question.question)
+             console.log(question.answer)
              
             })
             }
@@ -66,7 +76,8 @@ let readJeopardyData = async () => {
                  let question = randomQuestion(array400)
                  let paragraph = document.querySelector('p')
                  paragraph.innerText = question.question
-                 console.log(question)
+                 console.log(question.question)
+                 console.log(question.answer)
                 })
                 }
 
@@ -80,7 +91,8 @@ let readJeopardyData = async () => {
                      let question = randomQuestion(array600)
                      let paragraph = document.querySelector('p')
                      paragraph.innerText = question.question
-                     console.log(question)
+                     console.log(question.question)
+                     console.log(question.answer)
                     })
                     }
 
@@ -94,9 +106,30 @@ let readJeopardyData = async () => {
                          let question = randomQuestion(array800)
                          let paragraph = document.querySelector('p')
                          paragraph.innerText = question.question
-                         console.log(question)
+                         console.log(question.question)
+                         console.log(question.answer)
                         })
                         }
+
+                        
+                        
+                        form.addEventListener('submit',function(event){
+                           event.preventDefault();
+                           console.log(question.answer)
+                           console.log(inputText.value)
+
+                        //    if(inputText.value === question.answer){
+                                
+
+
+                        //  }
+
+                            
+
+
+                        })
+
+
 
 
 }
