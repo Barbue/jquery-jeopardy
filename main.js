@@ -26,6 +26,7 @@ let readJeopardyData = async () => {
     let submitButton = document.querySelector('#submitButton1');
     let inputText = document.querySelector('#userInput');
     let form = document.querySelector('#answer');
+    let score = document.querySelector('#score');
 
     
 
@@ -35,102 +36,147 @@ let readJeopardyData = async () => {
 
     for(let i = 0; i < buttons100.length; i++){
         buttons100[i].addEventListener('click', function(){
-            function randomQuestion (array) {
-            let randomQ = Math.floor(Math.random() * array.length);
-            let q = array[randomQ];
-            return q
-            
-        }
-        
-         let question = randomQuestion(array100)
-         let paragraph = document.querySelector('p')
+            // function randomQuestion (array) {
+            //     let randomQ = Math.floor(Math.random() * array.length);
+            //     let q = array[randomQ];
+            //     return q
+                
+            // }
+        let question = randomQuestion(array100)
+        let paragraph = document.querySelector('p')
          paragraph.innerText = question.question
          console.log(question.question)
          console.log(question.answer)
-        })
-        }
+         form.addEventListener('submit',function(event){
+            event.preventDefault();
+            if(inputText.value === question.answer){
+               paragraph.innerText = 'Correct!' 
+           }
+           })
+           })
+           }
 
         for(let i = 0; i < buttons200.length; i++){
             buttons200[i].addEventListener('click', function(){
-                function randomQuestion (array) {
-                let randomQ = Math.floor(Math.random() * array.length);
-                let q = array[randomQ];
-                return q
-            }
+            //     function randomQuestion (array) {
+            //     let randomQ = Math.floor(Math.random() * array.length);
+            //     let q = array[randomQ];
+            //     return q
+            // }
              let question = randomQuestion(array200)
              let paragraph = document.querySelector('p')
              paragraph.innerText = question.question
              console.log(question.question)
              console.log(question.answer)
-             
-            })
-            }
+             form.addEventListener('submit',function(event){
+                event.preventDefault();
+                if(inputText.value === question.answer){
+                   paragraph.innerText = 'Correct!'
+                }
+                })
+                })
+                }
 
             for(let i = 0; i < buttons400.length; i++){
                 buttons400[i].addEventListener('click', function(){
-                    function randomQuestion (array) {
-                    let randomQ = Math.floor(Math.random() * array.length);
-                    let q = array[randomQ];
-                    return q
-                }
+                //     function randomQuestion (array) {
+                //     let randomQ = Math.floor(Math.random() * array.length);
+                //     let q = array[randomQ];
+                //     return q
+                // }
                  let question = randomQuestion(array400)
                  let paragraph = document.querySelector('p')
                  paragraph.innerText = question.question
                  console.log(question.question)
                  console.log(question.answer)
-                })
-                }
+                 form.addEventListener('submit',function(event){
+                    event.preventDefault();
+                    if(inputText.value === question.answer){
+                       paragraph.innerText = 'Correct!'
+                    }
+                    })
+                    })
+                    }
+
 
                 for(let i = 0; i < buttons600.length; i++){
                     buttons600[i].addEventListener('click', function(){
-                        function randomQuestion (array) {
-                        let randomQ = Math.floor(Math.random() * array.length);
-                        let q = array[randomQ];
-                        return q
-                    }
+                    //     function randomQuestion (array) {
+                    //     let randomQ = Math.floor(Math.random() * array.length);
+                    //     let q = array[randomQ];
+                    //     return q
+                    // }
                      let question = randomQuestion(array600)
                      let paragraph = document.querySelector('p')
                      paragraph.innerText = question.question
                      console.log(question.question)
                      console.log(question.answer)
-                    })
-                    }
+                     form.addEventListener('submit',function(event){
+                        event.preventDefault();
+                        if(inputText.value === question.answer){
+                           paragraph.innerText = 'Correct!'
+                        }
+                        })
+                        })
+                        }
 
                     for(let i = 0; i < buttons800.length; i++){
                         buttons800[i].addEventListener('click', function(){
-                            function randomQuestion (array) {
-                            let randomQ = Math.floor(Math.random() * array.length);
-                            let q = array[randomQ];
-                            return q
-                        }
+                        //     function randomQuestion (array) {
+                        //     let randomQ = Math.floor(Math.random() * array.length);
+                        //     let q = array[randomQ];
+                        //     return q
+                        // }
                          let question = randomQuestion(array800)
                          let paragraph = document.querySelector('p')
                          paragraph.innerText = question.question
                          console.log(question.question)
                          console.log(question.answer)
-                        })
-                        }
+                         form.addEventListener('submit',function(event){
+                            event.preventDefault();
+                         if(inputText.value === question.answer){
+                            paragraph.innerText = 'Correct!'
+                         }
+                         })
+                         })
+                         }
 
                         
                         
-                        form.addEventListener('submit',function(event){
-                           event.preventDefault();
-                           console.log(question.answer)
-                           console.log(inputText.value)
+            //             form.addEventListener('submit',function(event){
+            //                event.preventDefault();
+                           
+            // //                let question = randomQuestion(array200)
+            // //  let paragraph = document.querySelector('p')
+            // //  paragraph.innerText = question.question
+                          
+            //                console.log(inputText.value)
+            //                console.log(question.answer)
 
-                        //    if(inputText.value === question.answer){
+            //             //    if(inputText.value === question.answer){
                                 
 
 
-                        //  }
+            //             //  }
 
                             
 
 
-                        })
+            //             })
 
-
-
+                        
+            
+            
+            
+            
+            
+            
+function randomQuestion (array) {
+let randomQ = Math.floor(Math.random() * array.length);
+let q = array[randomQ];
+return q
+                            
+}
 
 }
 
