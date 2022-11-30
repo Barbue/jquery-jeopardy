@@ -27,6 +27,7 @@ let readJeopardyData = async () => {
     let inputText = document.querySelector('#userInput');
     let form = document.querySelector('#answer');
     let score = document.querySelector('#score');
+    let totalScore = 0
 
     
 
@@ -43,14 +44,18 @@ let readJeopardyData = async () => {
                 
             // }
         let question = randomQuestion(array100)
-        let paragraph = document.querySelector('p')
+        let paragraph = document.querySelector('#question')
          paragraph.innerText = question.question
          console.log(question.question)
          console.log(question.answer)
          form.addEventListener('submit',function(event){
             event.preventDefault();
             if(inputText.value === question.answer){
-               paragraph.innerText = 'Correct!' 
+               paragraph.innerText = 'Correct!';  totalScore = totalScore + 100; 
+               score.innerText = totalScore
+           } else if(inputText.value !== question.answer){
+            paragraph.innerText = 'Incorrect!'; totalScore = totalScore - 100; score.innerText = totalScore
+
            }
            })
            })
@@ -63,15 +68,18 @@ let readJeopardyData = async () => {
             //     let q = array[randomQ];
             //     return q
             // }
-             let question = randomQuestion(array200)
-             let paragraph = document.querySelector('p')
+             let question = randomQuestion(array200);
+             let paragraph = document.querySelector('#question');
              paragraph.innerText = question.question
              console.log(question.question)
              console.log(question.answer)
              form.addEventListener('submit',function(event){
                 event.preventDefault();
                 if(inputText.value === question.answer){
-                   paragraph.innerText = 'Correct!'
+                    paragraph.innerText = 'Correct!';  totalScore = totalScore + 200; 
+                    score.innerText = totalScore
+                } else if(inputText.value !== question.answer){
+                 paragraph.innerText = 'Incorrect!'; totalScore = totalScore - 200; score.innerText = totalScore
                 }
                 })
                 })
@@ -84,15 +92,19 @@ let readJeopardyData = async () => {
                 //     let q = array[randomQ];
                 //     return q
                 // }
-                 let question = randomQuestion(array400)
-                 let paragraph = document.querySelector('p')
+                 let question = randomQuestion(array400);
+                 let paragraph = document.querySelector('#question');
                  paragraph.innerText = question.question
                  console.log(question.question)
                  console.log(question.answer)
                  form.addEventListener('submit',function(event){
                     event.preventDefault();
                     if(inputText.value === question.answer){
-                       paragraph.innerText = 'Correct!'
+                        paragraph.innerText = 'Correct!';  totalScore = totalScore + 400; 
+                        score.innerText = totalScore
+                    } else if(inputText.value !== question.answer){
+                     paragraph.innerText = 'Incorrect!'; totalScore = totalScore - 400; score.innerText = totalScore
+         
                     }
                     })
                     })
@@ -106,15 +118,18 @@ let readJeopardyData = async () => {
                     //     let q = array[randomQ];
                     //     return q
                     // }
-                     let question = randomQuestion(array600)
-                     let paragraph = document.querySelector('p')
+                     let question = randomQuestion(array600);
+                     let paragraph = document.querySelector('#question')
                      paragraph.innerText = question.question
                      console.log(question.question)
                      console.log(question.answer)
                      form.addEventListener('submit',function(event){
                         event.preventDefault();
                         if(inputText.value === question.answer){
-                           paragraph.innerText = 'Correct!'
+                            paragraph.innerText = 'Correct!'; totalScore = totalScore + 600; score.innerText = totalScore
+                        } else if(inputText.value !== question.answer){
+                         paragraph.innerText = 'Incorrect!'; totalScore = totalScore - 600; score.innerText = totalScore
+             
                         }
                         })
                         })
@@ -127,15 +142,18 @@ let readJeopardyData = async () => {
                         //     let q = array[randomQ];
                         //     return q
                         // }
-                         let question = randomQuestion(array800)
-                         let paragraph = document.querySelector('p')
+                         let question = randomQuestion(array800);
+                         let paragraph = document.querySelector('#question');
                          paragraph.innerText = question.question
                          console.log(question.question)
                          console.log(question.answer)
                          form.addEventListener('submit',function(event){
                             event.preventDefault();
                          if(inputText.value === question.answer){
-                            paragraph.innerText = 'Correct!'
+                            paragraph.innerText = 'Correct!';  totalScore = totalScore + 800; score.innerText = totalScore
+                         } else if(inputText.value !== question.answer){
+                         paragraph.innerText = 'Incorrect!'; totalScore = totalScore - 800; score.innerText = totalScore
+
                          }
                          })
                          })

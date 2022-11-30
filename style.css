@@ -42,6 +42,16 @@ label{
   #answer{
     text-align: center;
 }
+
+#score{
+    text-align: center;
+}
+
+#question{
+    text-align: center;
+
+}
+
 #section-100-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
