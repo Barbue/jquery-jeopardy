@@ -15,6 +15,11 @@ text-align: center;
    background-color: darkblue;
 }
 
+body{
+    background-color: cadetblue;
+} 
+
+
 
 
 
@@ -36,6 +41,7 @@ label{
 
     border-style: groove;
     border-color: #daa520;
+    background-color: cadetblue;
 
   }
 
