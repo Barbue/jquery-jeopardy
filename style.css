@@ -4,8 +4,6 @@ h1 {
     color:  goldenrod;
     border-style: groove;
     background-color: darkblue;
-
-
 }
 
 h4 {
@@ -19,10 +17,6 @@ body{
     background-color: cadetblue;
 } 
 
-
-
-
-
 button {
     color: goldenrod;
     border-style: groove;
@@ -35,17 +29,16 @@ label{
     border-style: groove;
     border-color: #daa520;
     background-color: darkblue;
-   }
+}
 
-   #userInput{
-
+#userInput{
     border-style: groove;
     border-color: #daa520;
     background-color: cadetblue;
 
-  }
+}
 
-  #answer{
+#answer{
     text-align: center;
 }
 
